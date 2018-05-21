@@ -27,17 +27,17 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td><td><img src="1.jpg" class="img-responsive center-block"></img></td><td>56</td><td>￥18.8</td><td>2018-5-12</td>
+<td>1</td><td><img src="1.jpg" class="img-responsive center-block"/></td><td>56</td><td>￥18.8</td><td>2018-5-12</td>
 <td>
 <div class="btn_group">
-<button type="button" class="btn btn-default">详情</button>
+<button id="productDetail"type="button" class="btn btn-default">详情</button>
 <button type="button" class="btn btn-default">修改</button>
 <button type="button" class="btn btn-default">下架</button>
 <button type="button" class="btn btn-default">删除</button>
 </div></td>
 </tr>
 <tr>
-<td>1</td><td><img src="1.jpg" class="img-responsive center-block"></img></td><td>56</td><td>￥18.8</td><td>2018-5-12</td><td>
+<td>1</td><td><img src="1.jpg" class="img-responsive center-block"/></td><td>56</td><td>￥18.8</td><td>2018-5-12</td><td>
 <div class="btn_group">
 <button type="button" class="btn btn-default">详情</button>
 <button type="button" class="btn btn-default">修改</button>
@@ -61,5 +61,9 @@
     <li><a href="#">&raquo;</a></li>
 </ul>
 </div>
-
+<script>
+    $("#productDetail").click(function(){
+        $("#main").load("productDetail.html");
+    });
+</script>
 </html>
