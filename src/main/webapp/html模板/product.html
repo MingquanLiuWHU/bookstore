@@ -8,15 +8,21 @@
         }
 </style>
 </head>
-<div class="text-left">
+<form form class="form-inline" role="form">
+<div class="form-group text-left">
 <button type="button" class="btn btn-default btn-primary">新增商品</button>
 </div>
+<div class="form-group right" style="float:right">
+<select class="form-control"><option>升序</option><option>降序</option></select>
+<select class="form-control"><option>名称</option><option>数量</option><option>价格</option><option>修改时间</option></select>
+</div>
+</form>
 <hr/>
 <div>
 <table class="table table-bordered text-center">
 <thead>
 <tr>
-<th>编号</th><th>商品</th><th>数量</th><th>价格</th><th>修改时间</th><th>操作</th>
+<th>名称</th><th>商品</th><th>数量</th><th>价格</th><th>修改时间</th><th>操作</th>
 </tr>
 </thead>
 <tbody>
