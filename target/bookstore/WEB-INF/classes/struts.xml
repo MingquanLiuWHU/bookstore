@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="bookstore" extends="struts-default"
+             namespace="/">
+        <action name="user_*" class="userAction" method="{1}">
+
+            <allowed-methods>login,register,update,exit</allowed-methods>
+        </action>
+
+        <action name="product_*" class="productAction" method="{1}">
+            <allowed-methods>findByNameLike,findByPriceBetween
+                ,findByCategory,findAll</allowed-methods>
+        </action>
+
+        <action name="store_*" class="storeAction" method="{1}">
+            <allowed-methods>saveOrUpdate</allowed-methods>
+        </action>
+        <action name="order_*" class="orderAction" method="{1}">
+            <allowed-methods>findAll,sent,balance,received</allowed-methods>
+        </action>
+        <action name="cart_*" class="cartAction" method="{1}">
+            <allowed-methods>addProduct,updateProductQuantity,removeProduct,removeProducts,generateOrder</allowed-methods>
+        </action>
+    </package>
+    <!-- 测试用-->
+    <package name="test" extends="struts-default" namespace="/">
+        <action name="test_*" class="testAction" method="{1}">
+            <result name="success">index.jsp</result>
+            <result name="input">login.jsp</result>
+            <allowed-methods>test</allowed-methods>
+        </action>
+    </package>
+</struts>
