@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"></meta>
+<style>
+.table tbody tr td{
+            vertical-align: middle;
+        }
+</style>
+</head>
+<form  class="form-inline" role="form">
+<div class="form-group text-left">
+<button id="newProduct"type="button" class="btn btn-default btn-primary">新增图书</button>
+</div>
+<div class="form-group right" style="float:right">
+<select class="form-control"><option>升序</option><option>降序</option></select>
+<select class="form-control"><option>名称</option><option>数量</option><option>价格</option><option>修改时间</option></select>
+</div>
+</form>
+<hr/>
+<div>
+<table class="table table-bordered text-center ">
+<thead>
+<tr>
+<th>图书名称</th><th>图片</th><th>剩余数量</th><th>价格</th><th>销量</th><th>操作</th>
+</tr>
+</thead>
+<tbody >
+<tr>
+<td>java核心技术</td><td class="col-lg-1"><img class="img-responsive"src="1.jpg"/></td><td>14</td><td>￥56.99</td><td>12</td>
+<td>
+<div >
+<form name="detailForm" action="productDetail.html"><input type="submit" class="btn btn-default"  value="详情"/><input type="hidden" value="1"/></form>
+
+<button id="edit" type="button" class="btn btn-default">修改</button>
+<button type="button" class="btn btn-default">下架</button>
+<button type="button" class="btn btn-default">删除</button>
+</div></td>
+</tr>
+<tr>
+<td>java核心技术</td><td class="col-lg-1"><img class="img-responsive"src="1.jpg"/></td><td>14</td><td>￥56.99</td><td>12</td><td>
+<div >
+<form name="detailForm" action="productDetail.html"><input type="submit" class="btn btn-default"  value="详情"/><input type="hidden" value="1"/></form>
+<button type="button" class="btn btn-primary" name="detail" >详情</button>
+<button type="button" class="btn btn-primary">修改</button>
+<button type="button" class="btn btn-primary">下架</button>
+<button type="button" class="btn btn-primary">删除</button>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="text-right">
+<ul class="pagination ">
+    <li><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li ><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+<script>
+    $("#productDetail").click(function(){
+        $("#main").load("productDetail.html");
+    });
+	$("#newProduct").click(function(){
+		$("#main").load("newProduct.html");
+	});
+    $("#edit").click(function () {
+        $("#main").load("editProduct.html");
+    });
+    $("form[name='detailForm']").submit(function (envent)  
+    {  
+        envent.preventDefault(); 
+        var form = $(this);  
+$.get(form.attr("action"),form.serialize(),function(data,status){
+    $("#main").html(data);
+  });
+           
+        });  
+    
+</script>
+</html>

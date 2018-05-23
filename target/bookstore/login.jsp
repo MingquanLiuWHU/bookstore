@@ -1,23 +1,26 @@
 
-<%@ page language="java" contentType="text/html;charset=UTF-8"%>
+<%@ page  contentType="text/html;charset=UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE HTML>
-
 <html>
 <head>
   <title>登录测试</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body>
-<form action="/WebBookstore/user_login"  method="post" >
+<div class="container">
 
-帐号：
-<input type="text" name="account"/><br/>
-密码：
-<input type="password" name="password"/><br/>
-<input type="submit" value="登录"/>
-</form>
-${actionErrors[0] }
+  <form class="form-signin">
+    <h2 class="form-signin-heading">登录</h2>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+  </form>
+
+</div>
 
 </body>
 </html>

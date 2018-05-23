@@ -132,7 +132,7 @@ public class OrderAction extends ActionSupport {
         //清空session里的订单
         ActionContext.getContext().getSession().put("userOrder", null);
         //保存并尝试结算
-        orderService.saveAndBalance(user,order,map,addressId);
+       // orderService.saveAndBalance(user,order,map,addressId);
         return NONE;
     }
 
