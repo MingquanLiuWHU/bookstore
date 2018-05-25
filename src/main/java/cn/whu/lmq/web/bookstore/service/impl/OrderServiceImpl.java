@@ -69,7 +69,7 @@ public class OrderServiceImpl implements OrderService {
             throw new NullPointerException();
         }
         //根据order.id查询实体order
-        UserOrder existOrder = orderDao.getById(userOrder);
+        UserOrder existOrder = orderDao.findById(userOrder);
 
         if (existOrder.getState() == OrderState.CLOSED || existOrder.getState() == OrderState.RECEIVED) {
             //关闭和交易成功的订单不能再修改状态
@@ -87,7 +87,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     private UserOrder checkUserWithOrder(User user, UserOrder userOrder) {
-        UserOrder existOrder = orderDao.getById(userOrder);
+        UserOrder existOrder = orderDao.findById(userOrder);
         if (existOrder == null) {
             throw new NullPointerException("order不存在");
         }
@@ -113,17 +113,8 @@ public class OrderServiceImpl implements OrderService {
                 .reduce(BigDecimal::add)
                 .orElseThrow(IllegalStateException::new); //总价计算不出抛出异常
         userOrder.setTotalMoney(totalMoney);
-        BigDecimal originalTotalMoney = userOrder.getOrderDetails()
-                .stream()
-                .map(OrderDetail::getProduct)
-                .map(Product::getOriginalPrice)
-                .reduce(BigDecimal::add)
-                .orElse(null);//原价允许为空
-        userOrder.setOriginalTotalMoney(originalTotalMoney);
-        if(originalTotalMoney!=null&&originalTotalMoney.compareTo(totalMoney)<0){
-            //原价低于售价
-            throw new IllegalStateException("原价不能低于售价");
-        }
+
+
         //校验
         orderDao.save(userOrder);
         userOrder.setState(OrderState.CANCELED);
@@ -176,7 +167,7 @@ public class OrderServiceImpl implements OrderService {
         //调用支付接口
         try {
             //获取支付账户
-            PaymentAccount userAccount = paymentService.getByUser(user);
+            PaymentAccount userAccount = paymentService.findByUser(user);
 
             paymentService.pay(userAccount, new PaymentAccount(),existOrder.getTotalMoney());
             //此处的异常需要直接捕获处理
@@ -244,8 +235,6 @@ public class OrderServiceImpl implements OrderService {
                     if (product2Quantity.keySet().contains(p.getId())) {
                         p.setQuantity(product2Quantity.get(p.getId()));
                     }
-                    //设置product为售出
-                    p.setSold(true);
                     p.setOnSale(false);
                 });
         this.save(order);
@@ -261,7 +250,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void saveAndBalance(UserOrder userOrder, Map<Integer, Integer> product2Quantity, int addressId) {
         //获取地址
-        Address add = addressDao.getById(new Address(addressId));
+        Address add = addressDao.findById(new Address(addressId));
         if (add == null) {
             throw new IllegalStateException();
         }

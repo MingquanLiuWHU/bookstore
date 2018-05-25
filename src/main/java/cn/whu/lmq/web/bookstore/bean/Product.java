@@ -3,10 +3,11 @@ package cn.whu.lmq.web.bookstore.bean;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 商品信息
@@ -16,38 +17,35 @@ import java.util.List;
 @DynamicInsert
 @DynamicUpdate
 public class Product extends BaseBean {
-    //原价
-    @Column(name="original_price")
-    private BigDecimal originalPrice;
     //售价
     private BigDecimal price;
-    //剩余的数量或者售出的数量
+    //剩余的数量
     private Integer quantity;
-    //多个类别
-    @ManyToMany
-    @JoinTable(name="product_with_category",joinColumns = {@JoinColumn(name="category_id")},
-    inverseJoinColumns = {@JoinColumn(name="product_id")}
-    )
-    private List<Category> categories = new ArrayList<>();
+    //销量
+    @Column(name = "sold_quantity")
+    private Integer soldQuantity;
+    //对应的图片
+    @Column(name = "image_url")
+    private String imageUrl;
     //对应的书本
     @Embedded
     private Book book;
-    //表示该商品的售出状态，已售出的用于关联order，true表示售出,默认false
-    private boolean sold = false;
     //商品是否下架,下架对于用户不可见,true表示在售,默认true
     private boolean onSale = true;
 
-    public Product(){}
-    public Product(Integer id){
+    public Product() {
+    }
+
+    public Product(Integer id) {
         super.setId(id);
     }
 
-    public boolean isSold() {
-        return sold;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setSold(boolean sold) {
-        this.sold = sold;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public boolean isOnSale() {
@@ -56,14 +54,6 @@ public class Product extends BaseBean {
 
     public void setOnSale(boolean onSale) {
         this.onSale = onSale;
-    }
-
-    public BigDecimal getOriginalPrice() {
-        return originalPrice;
-    }
-
-    public void setOriginalPrice(BigDecimal originalPrice) {
-        this.originalPrice = originalPrice;
     }
 
     public BigDecimal getPrice() {
@@ -90,11 +80,11 @@ public class Product extends BaseBean {
         this.book = book;
     }
 
-    public List<Category> getCategories() {
-        return categories;
+    public Integer getSoldQuantity() {
+        return soldQuantity;
     }
 
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
+    public void setSoldQuantity(Integer soldQuantity) {
+        this.soldQuantity = soldQuantity;
     }
 }

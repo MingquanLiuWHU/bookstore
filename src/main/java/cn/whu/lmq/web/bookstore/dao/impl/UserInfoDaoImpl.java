@@ -1,21 +1,18 @@
 package cn.whu.lmq.web.bookstore.dao.impl;
 
-import java.util.List;
-import java.util.function.Consumer;
-
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.stereotype.Repository;
-
 import cn.whu.lmq.web.bookstore.bean.User;
 import cn.whu.lmq.web.bookstore.bean.UserInfo;
 import cn.whu.lmq.web.bookstore.dao.UserInfoDao;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository("userInfoDao")
 public class UserInfoDaoImpl extends BaseDaoImpl<UserInfo> implements UserInfoDao {
 
 	@Override
-	public UserInfo getByUser(User user) {
+	public UserInfo findByUser(User user) {
 		List<UserInfo> userInfos = findByCriteria(criteria->{
 			criteria.add(Restrictions.eq("user", user));
 		});
@@ -24,6 +21,7 @@ public class UserInfoDaoImpl extends BaseDaoImpl<UserInfo> implements UserInfoDa
 		}
 		return userInfos.get(0);
 	}
+
 
 
 }

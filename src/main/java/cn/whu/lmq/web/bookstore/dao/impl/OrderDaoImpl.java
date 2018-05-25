@@ -9,5 +9,4 @@ import cn.whu.lmq.web.bookstore.dao.OrderDao;
 public class OrderDaoImpl extends BaseDaoImpl<UserOrder> implements OrderDao {
 
 
-
 }

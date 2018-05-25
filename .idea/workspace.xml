@@ -7,45 +7,168 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1d66992-9ed8-4b31-b7ca-f916ee0b504d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/js/navigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/products.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/html模板/editProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/AdminAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/interceptor/AdminInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/AdminDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AdminDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/js/productOperation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_new.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/OrderAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/OrderAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/CartAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/CartAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/ProductAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/ProductAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/StoreAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/StoreAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/TestAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/TestAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/CategoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ShipmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ShipmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/UserInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/UserInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/CategoryDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/util/CopyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/util/CopyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html模板/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html模板/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/productDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html模板/productDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/resources/navbar-fixed-top.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html模板/resources/navbar-fixed-top.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/store.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/navigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/js/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/js/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/products.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/editProduct.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/editStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/newProduct.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/productDetail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/resources/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/resources/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/resources/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/resources/navbar-fixed-top.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html模板/store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/util/CheckUtilTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/CartAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/CartAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/OrderAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/OrderAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/PaymentAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/PaymentAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/ProductAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/ProductAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/StoreAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/StoreAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/TestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/action/TestAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/bean/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/CategoryDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/ShipmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/ShipmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/UserInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/UserInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/CategoryDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/util/CheckUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/newProduct.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/productDetail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/fileinput.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/fileinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/fileinput.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/html模板/resources/navbar-fixed-top.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/manager/store.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/CartAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/CartAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/OrderAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/OrderAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/PaymentAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/PaymentAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/ProductAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/ProductAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/StoreAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/StoreAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/TestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/action/TestAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/bean/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/CategoryDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/ShipmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/ShipmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/UserInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/UserInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/CategoryDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/util/CheckUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/util/CopyUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/whu/lmq/web/bookstore/util/CopyUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/whu/lmq/web/bookstore/util/CheckUtilTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,38 +201,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin.jsp">
+      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="266">
+              <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/navigation.js">
+      <file leaf-file-name="store_edit.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="152">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/products.jsp">
+      <file leaf-file-name="StoreAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/StoreAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/html模板/product.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="64" column="6" lean-forward="true" selection-start-line="54" selection-end-line="64" selection-end-column="6" />
+            <state relative-caret-position="203">
+              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -119,13 +234,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -133,16 +248,29 @@
     <findStrings>
       <find>cn.whu.lmq.bookstore</find>
       <find>get</find>
-      <find>s\n\	 \* \@see \#setQueryCacheR</find>
-      <find>@Entity\(name = &quot;*&quot;</find>
+      <find />
+      <find />
       <find>@Entity</find>
       <find>order</find>
+      <find>signin</find>
+      <find>empty</find>
+      <find>Empty</find>
+      <find>getBy</find>
+      <find>%@in</find>
+      <find />
+      <find />
+      <find />
     </findStrings>
     <replaceStrings>
       <replace>cn.whu.lmq.web.bookstore</replace>
       <replace />
       <replace>@Table</replace>
       <replace>userOrder</replace>
+      <replace>login</replace>
+      <replace>findBy</replace>
+      <replace />
+      <replace />
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>F:\IdeaProjects\bookstore\src\main\java\cn\whu\lmq\web</dir>
@@ -154,57 +282,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/StoreService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ProductDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/UserOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/OrderState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/UserAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/CartService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Product.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/ProductAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Store.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/TestAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/CartAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Seller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/NotEnoughBalanceException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/PasswordErrorException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/PaymentAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/test/image.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/test/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/AdminDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/login.css" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/interceptor/AdminInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/interceptor/AdminInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/navigation.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/AdminAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AdminDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/NoSuchAccountEception.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/NoSuchAccountException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/PaymentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/constant/PayReturnKey.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/StoreAction.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/manager/store.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html模板/productDetail.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html模板/product.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html模板/editProduct.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/OrderAction.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html模板/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/navigation.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/helper/PageBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/products.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/editStore.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/editStore.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/editProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/newProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/productDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/products.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/ProductAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/StoreAction.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/BeanUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/util/CopyUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/util/BeanUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_edit.jsp" />
       </list>
     </option>
   </component>
@@ -238,7 +366,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -287,6 +415,90 @@
               <item name="bookstore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -310,32 +522,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="html模板" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="html模板" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
@@ -344,6 +531,37 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,10 +580,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.min.js" />
+    <property name="last_opened_file_path" value="F:/个人/jquery-3.3.1.js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
@@ -376,8 +594,13 @@
       <recent name="cn.whu.lmq.web.bookstore.service.impl" />
       <recent name="cn.whu.lmq.web.bookstore.util" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.whu.lmq.web.bookstore.util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IdeaProjects\bookstore\src\main\webapp\WEB-INF" />
       <recent name="F:\IdeaProjects\bookstore\src\main\webapp\css" />
+      <recent name="F:\IdeaProjects\bookstore\src\main\webapp\test" />
       <recent name="F:\IdeaProjects\bookstore\src\main\webapp\js" />
       <recent name="F:\IdeaProjects\bookstore\src\main\webapp" />
     </key>
@@ -401,7 +624,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat-server">
+  <component name="RunManager" selected="JUnit.BeanUtilTest.copyTest2">
     <configuration name="ProductServiceImplTest.save1" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookstore" />
       <extension name="coverage">
@@ -428,7 +651,7 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="CriteriaTest.aliasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BeanUtilTest.copyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookstore" />
       <extension name="coverage">
         <pattern>
@@ -439,8 +662,31 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cn.whu.lmq.web.bookstore.util" />
-      <option name="MAIN_CLASS_NAME" value="cn.whu.lmq.web.bookstore.util.CriteriaTest" />
-      <option name="METHOD_NAME" value="aliasTest" />
+      <option name="MAIN_CLASS_NAME" value="cn.whu.lmq.web.bookstore.util.BeanUtilTest" />
+      <option name="METHOD_NAME" value="copyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BeanUtilTest.copyTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.whu.lmq.web.bookstore.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cn.whu.lmq.web.bookstore.util" />
+      <option name="MAIN_CLASS_NAME" value="cn.whu.lmq.web.bookstore.util.BeanUtilTest" />
+      <option name="METHOD_NAME" value="copyTest2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -464,29 +710,6 @@
       <option name="PACKAGE_NAME" value="cn.whu.lmq.web.bookstore.dao.impl" />
       <option name="MAIN_CLASS_NAME" value="cn.whu.lmq.web.bookstore.dao.impl.OrderDaoImplTest" />
       <option name="METHOD_NAME" value="save" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ProductServiceImplTest.save1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bookstore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.whu.lmq.web.bookstore.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.whu.lmq.web.bookstore.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="cn.whu.lmq.web.bookstore.service.impl.ProductServiceImplTest" />
-      <option name="METHOD_NAME" value="save1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -686,7 +909,7 @@
       </ConfigurationWrapper>
     </configuration>
     <configuration name="tomcat-server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.29" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="bookstore:war">
           <settings>
@@ -759,19 +982,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.tomcat-server" />
-      <item itemvalue="JUnit.CriteriaTest.aliasTest" />
-      <item itemvalue="JUnit.ProductServiceImplTest.save1" />
       <item itemvalue="Android JUnit.ProductServiceImplTest.save1" />
       <item itemvalue="JUnit.ProductServiceImplTest.save2" />
       <item itemvalue="JUnit.OrderDaoImplTest.save" />
+      <item itemvalue="JUnit.BeanUtilTest.copyTest" />
+      <item itemvalue="JUnit.BeanUtilTest.copyTest2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BeanUtilTest.copyTest2" />
+        <item itemvalue="JUnit.BeanUtilTest.copyTest" />
         <item itemvalue="JUnit.OrderDaoImplTest.save" />
         <item itemvalue="JUnit.ProductServiceImplTest.save2" />
         <item itemvalue="Android JUnit.ProductServiceImplTest.save1" />
-        <item itemvalue="JUnit.ProductServiceImplTest.save1" />
-        <item itemvalue="JUnit.CriteriaTest.aliasTest" />
       </list>
     </recent_temporary>
   </component>
@@ -809,19 +1032,17 @@
       <workItem from="1526984567104" duration="1495000" />
       <workItem from="1526998655526" duration="3062000" />
       <workItem from="1527061779577" duration="4486000" />
+      <workItem from="1527080985796" duration="8218000" />
+      <workItem from="1527135068857" duration="600000" />
+      <workItem from="1527149025914" duration="28176000" />
+      <workItem from="1527221237727" duration="10161000" />
+      <workItem from="1527235827938" duration="626000" />
+      <workItem from="1527236726052" duration="4036000" />
+      <workItem from="1527251022816" duration="11994000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CriteriaTest_aliasTest - 2018.05.15 at 17h 17m 29s.xml">
-      <configuration name="CriteriaTest.aliasTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CriteriaTest_aliasTest - 2018.05.15 at 17h 18m 09s.xml">
-      <configuration name="CriteriaTest.aliasTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CriteriaTest_aliasTest - 2018.05.15 at 17h 20m 37s.xml">
-      <configuration name="CriteriaTest.aliasTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CriteriaTest_aliasTest - 2018.05.15 at 17h 21m 15s.xml">
       <configuration name="CriteriaTest.aliasTest" configurationId="JUnit" />
     </history-entry>
@@ -843,9 +1064,18 @@
     <history-entry file="OrderDaoImplTest_save - 2018.05.18 at 18h 41m 53s.xml">
       <configuration name="OrderDaoImplTest.save" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BeanUtilTest_copyTest - 2018.05.26 at 00h 17m 30s.xml">
+      <configuration name="BeanUtilTest.copyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BeanUtilTest_copyTest2 - 2018.05.26 at 00h 26m 03s.xml">
+      <configuration name="BeanUtilTest.copyTest2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BeanUtilTest_copyTest2 - 2018.05.26 at 00h 27m 53s.xml">
+      <configuration name="BeanUtilTest.copyTest2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120375000" />
+    <option name="totallyTimeSpent" value="184186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -858,39 +1088,40 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015129" side_tool="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32792208" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980332" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32954547" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.2682927" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32954547" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32954547" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25340393" />
-      <window_info id="Web" order="2" sideWeight="0.5016234" side_tool="true" weight="0.25642964" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" sideWeight="0.501006" side_tool="true" weight="0.25642964" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3382114" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32954547" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.30081302" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32954547" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32954547" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49899396" visible="true" weight="0.25340393" />
+      <window_info id="Web" order="6" sideWeight="0.5016234" side_tool="true" weight="0.25642964" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" sideWeight="0.501006" side_tool="true" weight="0.25642964" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3382114" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -901,7 +1132,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -909,335 +1140,398 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/CartService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/store.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="128">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/ShoppingCartDao.java">
+    <entry file="jar://D:/Java/jdk1.8.0_172/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="253">
+          <caret line="304" column="9" selection-start-line="304" selection-start-column="9" selection-end-line="304" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.5.16/struts2-core-2.5.16-sources.jar!/com/opensymphony/xwork2/ActionContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        <state relative-caret-position="196">
+          <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.5.16/struts2-core-2.5.16-sources.jar!/com/opensymphony/xwork2/Action.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+        <state relative-caret-position="570">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.5.16/struts2-core-2.5.16.jar!/com/opensymphony/xwork2/ValidationAwareSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-591">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.5.16/struts2-core-2.5.16-sources.jar!/com/opensymphony/xwork2/ActionSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="241">
+          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AdminDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDetailDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ProductDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="133">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShipmentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/ShoppingCartDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="50" column="3" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/StoreDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        <state relative-caret-position="228">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/helper/PageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_172/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1192">
+          <caret line="440" column="26" selection-start-line="440" selection-start-column="26" selection-end-line="440" selection-end-column="26" />
+          <folding>
+            <element signature="docComment;method#remove#0;class#List#0" />
+            <element signature="docComment;method#containsAll#0;class#List#0" />
+            <element signature="docComment;method#addAll#0;class#List#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/AddressDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/navigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/editStore.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/js/navigation.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/AdminAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+        <state relative-caret-position="237">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/util/CopyUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/ProductAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-466">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#1706#1707#0" expanded="true" />
+            <element signature="e#3606#3607#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#4042#4043#0" expanded="true" />
+            <element signature="e#4069#4070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_new.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/product_edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/interceptor/AdminInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+        <state relative-caret-position="76">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/util/CheckUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="10" column="71" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="71" />
+          <caret line="10" column="74" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/util/CopyUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        <state relative-caret-position="279">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/OrderDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/whu/lmq/web/bookstore/util/BeanUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="161">
+          <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/ProductAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="130" column="19" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/TestAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/UserOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/OrderDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/CartAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="129" column="75" selection-start-line="129" selection-start-column="75" selection-end-line="129" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/CartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2869">
-          <caret line="170" column="30" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Seller.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/PaymentAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/impl/PaymentAccountDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <caret line="116" column="44" lean-forward="true" selection-start-line="116" selection-start-column="44" selection-end-line="116" selection-end-column="44" />
+          <folding>
+            <element signature="e#3348#3349#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/NoSuchAccountException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/PasswordErrorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/PaymentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/exception/NotEnoughBalanceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/PaymentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="18" column="102" selection-start-line="18" selection-start-column="102" selection-end-line="18" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="265" column="42" selection-start-line="265" selection-start-column="42" selection-end-line="265" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/dao/PaymentAccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/StoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/bean/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html模板/editProduct.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/manager/store.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/impl/StoreServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/OrderAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html模板/productDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="264">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/action/StoreAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+        <state relative-caret-position="203">
+          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/whu/lmq/web/bookstore/service/constant/PayReturnKey.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/navigation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html模板/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
+        <state relative-caret-position="-114" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
       <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        <state relative-caret-position="266">
+          <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html模板/product.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/store_edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="64" column="6" lean-forward="true" selection-start-line="54" selection-end-line="64" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/products.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="152">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
         </state>
       </provider>
     </entry>

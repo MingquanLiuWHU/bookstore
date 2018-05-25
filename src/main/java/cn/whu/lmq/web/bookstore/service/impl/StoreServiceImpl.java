@@ -32,14 +32,9 @@ public class StoreServiceImpl implements StoreService {
             storeDao.save(store);
             return;
         }
-        Store exist = storeDao.getById(store);
-        //还需要检验address属于user
-        // 复制需要更新的字段
-        CopyUtil.copyNotNullFields(store, exist);
-        //还需处理地址的更新
-        if (exist.getAddress().getId() == null) {
-            //保存新地址
-        }
+        Store exist = storeDao.findById(store);
+        CopyUtil.copyNotNullFields(store,exist);
+        //更新
         storeDao.update(exist);
     }
 

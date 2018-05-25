@@ -17,7 +17,7 @@ public interface ShoppingCartDao extends BaseDao<ShoppingCart> {
 	 * @param product 商品
 	 * @return 用户名下对应该商品的购物车
 	 */
-	ShoppingCart getByUserAndProduct(User user, Product product);
+	ShoppingCart findByUserAndProduct(User user, Product product);
 
 	/**
 	 * 根据用户和商品列表得到多项购物车（细则）

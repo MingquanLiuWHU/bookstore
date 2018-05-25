@@ -38,7 +38,7 @@ public class CartServiceImpl implements CartService {
     @Override
     public void addProduct(User user, Product product) {
         //先查询
-        ShoppingCart cart = shoppingCartDao.getByUserAndProduct(user, product);
+        ShoppingCart cart = shoppingCartDao.findByUserAndProduct(user, product);
         if (cart == null) {//不存在则新建保存
             cart = new ShoppingCart();
             cart.setProduct(product);
@@ -82,7 +82,7 @@ public class CartServiceImpl implements CartService {
      * @return 用户含该商品的购物车（细则），商品不在购物车抛出异常
      */
     private ShoppingCart checkUserWithProduct(User user, Product product) {
-        ShoppingCart existCart = shoppingCartDao.getByUserAndProduct(user, product);
+        ShoppingCart existCart = shoppingCartDao.findByUserAndProduct(user, product);
         if (existCart == null) {
             throw new IllegalStateException("用户购物车并没有该商品");
         }
@@ -165,18 +165,13 @@ public class CartServiceImpl implements CartService {
             orderDetail.setProduct(cart.getProduct());
             orderDetail.getProduct().setQuantity(cart.getQuantity());
         });
-        //遍历计算总共的原价
-        Optional<BigDecimal> totalOriginalMoney = existCarts.stream()
-                .map(ShoppingCart::getProduct)
-                .map(Product::getOriginalPrice)
-                .reduce(BigDecimal::add);
+
         //遍历计算总售价
         Optional<BigDecimal> totalMoney = existCarts.stream()
                 .map(ShoppingCart::getProduct)
                 .map(Product::getPrice)
                 .reduce(BigDecimal::add);
-        //原价可能为空
-        userOrder.setOriginalTotalMoney(totalOriginalMoney.orElse(null));
+
         //现价如果为空抛出异常
         userOrder.setOriginalTotalMoney(totalMoney.orElseThrow(NullPointerException::new));
         userOrder.setUser(user);

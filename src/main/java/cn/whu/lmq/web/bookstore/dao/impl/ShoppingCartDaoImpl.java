@@ -22,7 +22,7 @@ public class ShoppingCartDaoImpl extends BaseDaoImpl<ShoppingCart> implements Sh
     }
 
     @Override
-    public ShoppingCart getByUserAndProduct(User user, Product product) {
+    public ShoppingCart findByUserAndProduct(User user, Product product) {
         List<ShoppingCart> carts = findByCriteria(criteria -> {
             criteria.add(Restrictions.eq("user", user));
             criteria.add(Restrictions.eq("product", product));
@@ -47,4 +47,6 @@ public class ShoppingCartDaoImpl extends BaseDaoImpl<ShoppingCart> implements Sh
             criteria.add(Restrictions.in("product",products));
         });
     }
+
+
 }

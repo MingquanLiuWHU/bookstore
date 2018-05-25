@@ -32,8 +32,8 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public void pay(PaymentAccount pay, PaymentAccount receive, BigDecimal money)
             throws NoSuchAccountException,PasswordErrorException ,NotEnoughBalanceException{
-        PaymentAccount existPay = paymentAccountDao.getById(pay);
-        PaymentAccount existReceive = paymentAccountDao.getById(receive);
+        PaymentAccount existPay = paymentAccountDao.findById(pay);
+        PaymentAccount existReceive = paymentAccountDao.findById(receive);
         //若有账户不存在
         if(existPay == null){
             throw new NoSuchAccountException(pay.getAccount());
@@ -59,12 +59,12 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public PaymentAccount getByUser(User user) {
-        return paymentAccountDao.getByUser(user);
+    public PaymentAccount findByUser(User user) {
+        return paymentAccountDao.findByUser(user);
     }
 
     @Override
-    public PaymentAccount getByAccount(String account) {
-        return paymentAccountDao.getByAccount(account);
+    public PaymentAccount findByAccount(String account) {
+        return paymentAccountDao.findByAccount(account);
     }
 }

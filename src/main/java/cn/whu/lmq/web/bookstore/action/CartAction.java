@@ -118,7 +118,7 @@ public class CartAction extends ActionSupport {
      */
     public String generateOrder() {
         //先检查是否关联支付账户
-        if(paymentService.getByUser(user) == null){
+        if(paymentService.findByUser(user) == null){
             //没有前去关联账户的页面
             return INPUT;
         }

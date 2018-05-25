@@ -26,10 +26,10 @@ public interface PaymentService {
     /**
      * 获取用户对应的支付账户
      */
-    PaymentAccount getByUser(User user);
+    PaymentAccount findByUser(User user);
 
     /**
      * 根据账户名称获取支付账户
      */
-    PaymentAccount getByAccount(String account);
+    PaymentAccount findByAccount(String account);
 }

@@ -3,15 +3,16 @@ package cn.whu.lmq.web.bookstore.action;
 import cn.whu.lmq.web.bookstore.bean.Product;
 import cn.whu.lmq.web.bookstore.helper.PageBean;
 import cn.whu.lmq.web.bookstore.service.ProductService;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.ServletActionContext;
+import com.opensymphony.xwork2.ModelDriven;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 @Controller
 @Scope("prototype")
-public class ProductAction extends ActionSupport {
+public class ProductAction extends ActionSupport implements ModelDriven<Product> {
     //对product操作的service
     private ProductService productService;
     //传递的product参数
@@ -22,14 +23,14 @@ public class ProductAction extends ActionSupport {
     private int minPrice = 0;
     //最高价格
     private int maxPrice = 0;
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
+    //列表页面
+    private static final String LIST = "list";
+    //商品详情页面
+    private static final String DETAIL = "detail";
+    //编辑页面
+    private static final String EDIT = "edit";
+    //新建页面
+    private static final String NEW = "new";
 
     public int getPage() {
         return page;
@@ -66,8 +67,8 @@ public class ProductAction extends ActionSupport {
     public String findByNameLike() {
         PageBean<Product> pageBean = productService
                 .findByNameLike(product.getBook().getBookName(), page);
-        ServletActionContext.getRequest().setAttribute("pageBean", pageBean);
-        return NONE;
+        ActionContext.getContext().getValueStack().set("pageBean",pageBean);
+        return LIST;
     }
 
     /**
@@ -76,33 +77,26 @@ public class ProductAction extends ActionSupport {
     public String findByPriceBetween() {
         PageBean<Product> pageBean = productService
                 .findByPriceBetween(minPrice, maxPrice, page);
-        ServletActionContext.getRequest().setAttribute("pageBean", pageBean);
-        return NONE;
+        ActionContext.getContext().getValueStack().set("pageBean",pageBean);
+        return LIST;
     }
 
-    /**
-     * 根据商品的类别查询
-     */
-    public String findByCategory() {
-        PageBean<Product> pageBean = productService
-                .findByCategory(product.getCategories().get(0), page);
-        ServletActionContext.getRequest().setAttribute("pageBean", pageBean);
-        return NONE;
-    }
+
 
     /**
      * 管理员查询所有商品
      */
     public String findAll() {
         PageBean<Product> pageBean = productService.findAll(page);
-        ServletActionContext.getRequest().setAttribute("pageBean", pageBean);
-        return NONE;
+        //将pageBean放入值栈
+        ActionContext.getContext().getValueStack().set("pageBean",pageBean);
+        return LIST;
     }
 
     /**
      * 对save方法的校验，可以直接放在save方法里
      */
-    public void validateSave() {
+    public void validateNewOne() {
         if (product == null) {
             this.addFieldError("product", "不能为空");
             return;
@@ -117,20 +111,14 @@ public class ProductAction extends ActionSupport {
         // TODO product属性的校验
     }
 
-    /**
-     * 保存product,需要admin校验
-     */
-    public String save() {
-        productService.save(product);
-        return NONE;
-    }
 
     /**
-     * 删除product，需要admin校验
+     * 删除商品
+     * @return 商品列表
      */
     public String delete(){
         productService.delete(product);
-        return NONE;
+        return this.findAll();
     }
 
     /**
@@ -139,5 +127,38 @@ public class ProductAction extends ActionSupport {
     public String update(){
         productService.update(product);
         return NONE;
+    }
+
+    /**
+     * 查询商品详情
+     * @return 编辑页面
+     */
+    public String edit(){
+        product = productService.findById(product);
+        //TODO 需不需要把product手动放入值栈？
+        return EDIT;
+    }
+
+    /**
+     * @return 新建商品页面
+     */
+    public String newOne(){
+        return NEW;
+    }
+
+    /**
+     * 保存商品
+     * @return 商品详情页面
+     */
+    public String save(){
+        productService.save(product);
+        return DETAIL;
+    }
+
+
+
+    @Override
+    public Product getModel() {
+        return product;
     }
 }

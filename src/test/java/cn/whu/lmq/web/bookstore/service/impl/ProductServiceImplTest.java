@@ -32,7 +32,6 @@ public class ProductServiceImplTest {
         Product product = new Product();
         product.setQuantity(10);
         product.setPrice(BigDecimal.TEN);
-        product.setOriginalPrice(BigDecimal.TEN.add(BigDecimal.TEN));
         Book book = new Book();
         book.setAuthor("作者");
         book.setBookName("书名");
@@ -55,7 +54,6 @@ public class ProductServiceImplTest {
         product.setId(2);
         product.setQuantity(10);
         product.setPrice(BigDecimal.TEN);
-        product.setOriginalPrice(BigDecimal.TEN.add(BigDecimal.TEN));
         Book book = new Book();
         book.setAuthor("作者2");
         book.setBookName("书名2");

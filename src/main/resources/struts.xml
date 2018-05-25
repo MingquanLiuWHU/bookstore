@@ -12,26 +12,75 @@
         </action>
 
         <action name="product_*" class="productAction" method="{1}">
-            <allowed-methods>findByNameLike,findByPriceBetween
-                ,findByCategory,findAll</allowed-methods>
+
+            <allowed-methods>findByNameLike,findByPriceBetween,findAll</allowed-methods>
         </action>
 
-        <action name="store_*" class="storeAction" method="{1}">
-            <allowed-methods>saveOrUpdate</allowed-methods>
-        </action>
+
         <action name="order_*" class="orderAction" method="{1}">
             <allowed-methods>findAll,sent,balance,received</allowed-methods>
         </action>
         <action name="cart_*" class="cartAction" method="{1}">
-            <allowed-methods>addProduct,updateProductQuantity,removeProduct,removeProducts,generateOrder</allowed-methods>
+            <allowed-methods>addProduct,updateProductQuantity,removeProduct,removeProducts,generateOrder
+            </allowed-methods>
         </action>
     </package>
+    <!--管理员页面-->
+    <package name="admin" extends="struts-default" namespace="/admin">
+        <!--拦截器-->
+        <interceptors>
+            <!--自定义拦截器检测管理员是否登录-->
+            <interceptor name="adminInterceptor" class="adminInterceptor"/>
+            <!--组合拦截器栈-->
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="defaultStack">
+                    <!--开启modelDriven的刷新-->
+                    <param name="modelDriven.refreshModelBeforeResult">true</param>
+                </interceptor-ref>
+                <interceptor-ref name="adminInterceptor"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <!--默认拦截器，拦截未登录-->
+        <default-interceptor-ref name="loginStack"/>
+
+
+        <!--登录页面-->
+        <global-results>
+            <result name="login" type="redirect">login.jsp</result>
+        </global-results>
+
+
+        <!--管理员登录-->
+        <action name="admin_*" class="adminAction" method="{1}">
+            <result name="success" type="redirect">product_findAll.action</result>
+            <!--使用默认拦截器覆盖登录拦截器-->
+            <interceptor-ref name="defaultStack"/>
+            <allowed-methods>login,exit</allowed-methods>
+        </action>
+        <!--管理员对店铺操作-->
+        <action name="store_*" class="storeAction" method="{1}">
+
+            <result name="edit">/WEB-INF/admin/store_edit.jsp</result>
+            <result name="success">/WEB-INF/admin/store_detail.jsp</result>
+            <allowed-methods>get,saveOrUpdate,edit</allowed-methods>
+        </action>
+
+        <!--管理员对商品操作-->
+        <action name="product_*" class="productAction" method="{1}">
+            <result name="detail">/WEB-INF/admin/product_detail.jsp</result>
+            <result name="edit">/WEB-INF/admin/product_edit.jsp</result>
+            <result name="list">/WEB-INF/admin/product_list.jsp</result>
+            <result name="new">/WEB-INF/admin/product_new.jsp</result>
+            <allowed-methods>findAll,findByPriceBetween,findByNameLike,save,edit,newOne,delete</allowed-methods>
+        </action>
+
+    </package>
     <!-- 测试用-->
-    <package name="test" extends="struts-default" namespace="/">
+    <package name="test" extends="struts-default" namespace="/test">
         <action name="test_*" class="testAction" method="{1}">
-            <result name="success">index.jsp</result>
-            <result name="input">login.jsp</result>
-            <allowed-methods>test</allowed-methods>
+            <result name="success">image.jsp</result>
+            <allowed-methods>test,detail,upload,url</allowed-methods>
         </action>
     </package>
 </struts>

@@ -12,7 +12,7 @@ import java.util.List;
 public class PaymentAccountDaoImpl extends BaseDaoImpl<PaymentAccount> implements PaymentAccountDao {
 
     @Override
-    public PaymentAccount getByUser(User user) {
+    public PaymentAccount findByUser(User user) {
         List<PaymentAccount> paymentAccounts = findByCriteria(criteria -> {
             criteria.add(Restrictions.eq("user", user));
         });
@@ -23,7 +23,7 @@ public class PaymentAccountDaoImpl extends BaseDaoImpl<PaymentAccount> implement
     }
 
     @Override
-    public PaymentAccount getByAccount(String account) {
+    public PaymentAccount findByAccount(String account) {
         List<PaymentAccount> paymentAccounts = findByCriteria(criteria ->
                 criteria.add(Restrictions.eq("account", account))
         );
@@ -32,6 +32,7 @@ public class PaymentAccountDaoImpl extends BaseDaoImpl<PaymentAccount> implement
         }
         return paymentAccounts.get(0);
     }
+
 
 
 }

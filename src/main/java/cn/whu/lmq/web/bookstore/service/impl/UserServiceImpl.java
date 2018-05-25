@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 	 */
 	@Override
 	public User login(User user) {
-		User exist = userDao.getByAccount(user.getAccount());
+		User exist = userDao.findByAccount(user.getAccount());
 		if(exist.getPassword().equals(user.getPassword())) {
 			return exist;
 		}
@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
 	public User register(User user) {
 		
 		// 查看用户是否已存在
-		User existUser = userDao.getByAccount(user.getAccount());
+		User existUser = userDao.findByAccount(user.getAccount());
 		if (existUser == null) {
 			userDao.save(user);
 			return user;
@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService {
 	 */
 	@Override
 	public User updateUsernameAndPassword(User user) {
-		User existUser = userDao.getById(user);
+		User existUser = userDao.findById(user);
 		if (existUser == null) {
 			return null;
 		}

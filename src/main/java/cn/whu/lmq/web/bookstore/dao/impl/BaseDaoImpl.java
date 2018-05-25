@@ -9,6 +9,7 @@ import org.hibernate.criterion.Projections;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import javax.annotation.Resource;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -46,13 +47,17 @@ public abstract class BaseDaoImpl<T extends BaseBean> extends HibernateDaoSuppor
 		return this.findByCriteria( consumer, -1, -1);
 	}
 
+    //获取泛型的具体类
+	private Class getBeanClass(){
+	    return (Class) ((ParameterizedType)this.getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+    }
+
 	@Override
 	@SuppressWarnings("unchecked")
 	public List<T> findByCriteria(Consumer<DetachedCriteria> consumer, int firstResult,
 			int maxResults) {
-		DetachedCriteria criteria = DetachedCriteria.forClass(this.getClass());
+		DetachedCriteria criteria = DetachedCriteria.forClass(this.getBeanClass());
 		consumer.accept(criteria);
-		//criteria.createAlias("","",JoinType.FULL_JOIN);
 		// 此处保证criteria得到的list能被转换成T类型
 		criteria.setResultTransformer(Criteria.ROOT_ENTITY);
 		return (List<T>) this.getHibernateTemplate().findByCriteria(criteria, firstResult, maxResults);
@@ -60,7 +65,7 @@ public abstract class BaseDaoImpl<T extends BaseBean> extends HibernateDaoSuppor
 
 	@Override
 	public int count(Consumer<DetachedCriteria> consumer) {
-		DetachedCriteria criteria = DetachedCriteria.forClass(this.getClass());
+		DetachedCriteria criteria = DetachedCriteria.forClass(this.getBeanClass());
 		consumer.accept(criteria);
 		Long rowCount = (Long) criteria
 				.getExecutableCriteria(this.getHibernateTemplate().getSessionFactory().getCurrentSession())
@@ -69,7 +74,7 @@ public abstract class BaseDaoImpl<T extends BaseBean> extends HibernateDaoSuppor
 	}
 
 	@SuppressWarnings("unchecked")
-	public T getById(T t) {
+	public T findById(T t) {
 		return (T)this.getHibernateTemplate().get(t.getClass().getName(),t.getId());
 	}
 

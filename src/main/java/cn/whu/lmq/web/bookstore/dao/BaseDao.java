@@ -8,7 +8,7 @@ import org.hibernate.criterion.DetachedCriteria;
 import cn.whu.lmq.web.bookstore.bean.BaseBean;
 
 public interface BaseDao<T extends BaseBean> {
-	T getById(T t);
+	T findById(T t);
 
 	List<T> findByCriteria(Consumer<DetachedCriteria> consumer);
 

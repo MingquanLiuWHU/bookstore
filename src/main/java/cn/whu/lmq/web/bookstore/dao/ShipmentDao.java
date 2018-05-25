@@ -6,5 +6,5 @@ import cn.whu.lmq.web.bookstore.bean.Shipment;
 public interface ShipmentDao extends BaseDao<Shipment> {
 	
 
-	Shipment getByOrder(UserOrder userOrder);
+	Shipment findByOrder(UserOrder userOrder);
 }

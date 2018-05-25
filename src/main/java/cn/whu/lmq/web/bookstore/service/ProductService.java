@@ -1,6 +1,5 @@
 package cn.whu.lmq.web.bookstore.service;
 
-import cn.whu.lmq.web.bookstore.bean.Category;
 import cn.whu.lmq.web.bookstore.bean.Product;
 import cn.whu.lmq.web.bookstore.helper.PageBean;
 
@@ -18,10 +17,7 @@ public interface ProductService {
      */
     PageBean<Product> findByPriceBetween(int min,int max,int page);
 
-    /**
-     *根据类别查询
-     */
-    PageBean<Product> findByCategory(Category category,int page);
+
 
     /**
      * 查找全部
@@ -45,4 +41,6 @@ public interface ProductService {
      * @param product 商品
      */
     void update(Product product);
+
+    Product findById(Product product);
 }

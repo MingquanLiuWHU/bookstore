@@ -3,9 +3,8 @@ package cn.whu.lmq.web.bookstore.bean;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -16,38 +15,45 @@ import javax.persistence.Table;
 @DynamicInsert
 @DynamicUpdate
 public class Store extends BaseBean {
-	// 店名
-	private String storeName;
-	// 商店描述
-	private String description;
+    // 店名
+    private String storeName;
+    // 商店描述
+    private String description;
+    //地址
+    private String address;
+    //收款账户
+    @Column(name = "receive_account")
+    private String receiveAccount;
 
-	@OneToOne
-	@JoinColumn(name="address_id")
-	private Address address;
-	
+    public String getDescription() {
+        return description;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getStoreName() {
+        return storeName;
+    }
 
-	public String getStoreName() {
-		return storeName;
-	}
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
 
-	public void setStoreName(String storeName) {
-		this.storeName = storeName;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public Address getAddress() {
-		return address;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setAddress(Address address) {
-		this.address = address;
-	}
+    public String getReceiveAccount() {
+        return receiveAccount;
+    }
 
+    public void setReceiveAccount(String receiveAccount) {
+        this.receiveAccount = receiveAccount;
+    }
 }

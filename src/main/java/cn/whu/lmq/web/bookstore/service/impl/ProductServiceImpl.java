@@ -1,6 +1,5 @@
 package cn.whu.lmq.web.bookstore.service.impl;
 
-import cn.whu.lmq.web.bookstore.bean.Category;
 import cn.whu.lmq.web.bookstore.bean.Product;
 import cn.whu.lmq.web.bookstore.dao.ProductDao;
 import cn.whu.lmq.web.bookstore.helper.PageBean;
@@ -62,16 +61,7 @@ public class ProductServiceImpl implements ProductService {
         );
     }
 
-    @Override
-    public PageBean<Product> findByCategory(Category category, int page) {
-        return pageBeanService.listByPage(productDao,
-                criteria -> {
-                    criteria.createAlias("categories", "categories");
-                    criteria.add(Restrictions.eq("categories.id", category));
-                    addUserAuthority(criteria);
-                }, page, PAGE_SIZE
-        );
-    }
+
 
     @Override
     public PageBean<Product> findAll(int page) {
@@ -97,7 +87,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void delete(Product product) {
         //先查询
-        Product existProduct = productDao.getById(product);
+        Product existProduct = productDao.findById(product);
         if(existProduct == null){
             throw new IllegalStateException("要删除的product不存在");
         }
@@ -112,7 +102,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void update(Product product) {
         //先查询
-        Product existProduct = productDao.getById(product);
+        Product existProduct = productDao.findById(product);
         if(existProduct == null){
             throw new IllegalStateException("要更新的product不存在");
         }
@@ -120,5 +110,10 @@ public class ProductServiceImpl implements ProductService {
         CopyUtil.copyNotNullFields(product,existProduct);
         //更新
         productDao.update(existProduct);
+    }
+
+    @Override
+    public Product findById(Product product) {
+        return productDao.findById(product);
     }
 }
